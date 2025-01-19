@@ -1,0 +1,12 @@
+file_format: "1"
+id: phasmic
+name: phasmic
+type: shield
+url: https://github.com/josefadamcik/phasmicKeyboard
+requires: [pro_micro]
+features:
+  - keys
+  - studio
+siblings:
+  - phasmic_left
+  - phasmic_right
