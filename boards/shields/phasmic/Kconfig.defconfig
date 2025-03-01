@@ -50,3 +50,5 @@ config WS2812_STRIP
 endif
 
 endif
+
+CONFIG_ZMK_POINTING=y
