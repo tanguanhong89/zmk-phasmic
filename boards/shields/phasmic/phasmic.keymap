@@ -71,10 +71,10 @@
         util {
             display-name = "UTIL";
             bindings = <
-&kp MINUS &kp PLUS    &kp UNDER       &none       &none       &none   &none &none &none &none &none &none
+&kp MINUS &kp PLUS    &macro_maths       &none       &none       &none   &none &none &none &none &none &none
 &kp LPAR  &kp RPAR    &none           &kp UP      &none       &none   &none &none &none &none &none &none
 &kp LBKT  &kp RBKT    &kp LEFT        &kp DOWN    &kp RIGHT   &none   &none &none &none &none &none &none
-&kp LBRC  &kp RBRC    &macro_maths         &none       &none       &none   &none &none &none &none &none &none
+&kp LBRC  &kp RBRC    &kp UNDER         &none       &none       &none   &none &none &none &none &none &none
 &none &none           &kp DEL         &none       &none       &none   &none &none &none &none &none &none
 &none &none           &none           &none       &none       &none   &none &none &none &none &none &none
             >;
