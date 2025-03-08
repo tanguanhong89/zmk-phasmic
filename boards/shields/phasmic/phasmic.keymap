@@ -81,6 +81,13 @@
                 = <&macro_tap &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>;
         };
 
+        macro_rright: macro_rright {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT>;
+        };
+
         macro_tcpy: macro_tcpy {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
