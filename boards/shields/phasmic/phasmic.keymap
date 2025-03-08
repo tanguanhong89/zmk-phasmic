@@ -57,13 +57,6 @@
                 = <&macro_tap &kp LBRC &kp RBRC &kp LEFT>;
         };
 
-        macro_brc: macro_brc {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp LBRC &kp RBRC &kp LEFT>;
-        };
-
         macro_apos: macro_apos {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
