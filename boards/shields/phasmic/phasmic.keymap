@@ -33,7 +33,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp LALT &kp BSPC>;
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp BSPC>
+                , <&macro_release &kp LALT>
+                ;
         };
 
         macro_par: macro_par {
@@ -96,7 +99,7 @@
         };
 
         combo_abs {
-            timeout-ms = <500>;
+            timeout-ms = <300>;
             key-positions = <37 50>;
             bindings = <&macro_alt_backspace>;
         };
