@@ -173,8 +173,8 @@
             bindings = <
 &kp GRAVE   &kp TILDE   &macro_maths    &none       &none           &none   &none &none &none &none &none &none
 &kp MINUS   &kp PLUS    &macro_lleft    &kp UP      &macro_rright   &none   &none &none &none &none &none &none
-&none       &none       &kp LEFT        &kp DOWN    &kp RIGHT       &none   &none &none &none &none &none &none
-&none       &none       &kp UNDER       &macro_tcpy &macro_tpst     &none   &none &none &none &none &none &none
+&kp LALT    &kp LCTRL   &kp LEFT        &kp DOWN    &kp RIGHT       &none   &none &none &none &none &none &none
+&kp LSHFT       &kp LGUI    &kp UNDER       &macro_tcpy &macro_tpst     &none   &none &none &none &none &none &none
 &none       &none       &kp DEL         &none       &none           &none   &none &none &none &none &none &none
 &none       &none       &none           &none       &none           &none   &none &none &none &none &none &none
             >;
