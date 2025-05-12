@@ -117,7 +117,7 @@
     combos {
         compatible = "zmk,combos";
         combo_delete {
-            timeout-ms = <500>;
+            timeout-ms = <100>;
             key-positions = <36 50>;
             bindings = <&kp DEL>;
         };
