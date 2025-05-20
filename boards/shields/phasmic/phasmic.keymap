@@ -171,12 +171,12 @@
         util {
             display-name = "UTIL";
             bindings = <
-&kp GRAVE   &kp TILDE   &macro_maths    &macro_maths       &none           &none   &none &none     &none       &none       &none       &none
-&kp MINUS   &kp PLUS    &macro_lleft    &kp UP      &macro_rright   &none   &none &none     &none       &none       &none       &none
-&kp LALT    &kp LGUI    &kp LEFT        &kp DOWN    &kp RIGHT       &none   &none &kp LGUI  &kp LALT       &none       &none       &none
-&kp LSHFT   &kp LCTRL   &kp UNDER       &macro_tcpy &macro_tpst     &none   &none &none     &none    &none       &none       &none
-&none       &none       &kp DEL         &none       &none           &none   &none &none     &none       &none       &none       &none
-&none       &none       &none           &none       &none           &none   &none &none     &none       &none       &none       &none
+&kp GRAVE   &kp TILDE       &macro_maths    &macro_maths       &none           &none   &none &none     &none       &none       &none       &none
+&kp MINUS   &kp PLUS        &macro_lleft    &kp UP      &macro_rright   &none   &none &none     &none       &none       &none       &none
+&kp LALT    &kp LGUI        &kp LEFT        &kp DOWN    &kp RIGHT       &none   &none &kp LGUI  &kp LALT       &none       &none       &none
+&kp LSHFT   &macro_maths    &kp UNDER       &macro_tcpy &macro_tpst     &none   &none &none     &none    &none       &none       &none
+&none       &none           &kp DEL         &none       &none           &none   &none &none     &none       &none       &none       &none
+&none       &none           &none           &none       &none           &none   &none &none     &none       &none       &none       &none
             >;
         };
 
