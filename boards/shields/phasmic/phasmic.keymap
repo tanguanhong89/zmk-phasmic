@@ -29,14 +29,14 @@
                 = <&macro_tap &kp BSLH &kp LPAR  &kp BSLH &kp RPAR &kp LEFT  &kp LEFT>;
         };
 
-        macro_maths: macro_maths_pow {
+        macro_maths_pow: macro_maths_pow {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp CARET &kp LBRC &kp RBRC &kp LEFT>;
         };
 
-        macro_maths: macro_maths_frac {
+        macro_maths_frac: macro_maths_frac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
