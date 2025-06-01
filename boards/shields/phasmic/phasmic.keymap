@@ -43,7 +43,12 @@
                 = <&macro_tap &kp BSLH &kp F &kp R &kp A &kp C  &kp LBRC &kp RBRC  &kp LBRC &kp RBRC &kp LEFT &kp LEFT &kp LEFT>;
         };
 
-
+        macro_maths_int: macro_maths_int {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp BSLH &kp I &kp N &kp T &kp UNDER  &kp LBRC &kp RBRC  &kp CARET &kp LBRC &kp RBRC &kp LEFT &kp LEFT &kp LEFT &kp LEFT>;
+        };
 
 
 
