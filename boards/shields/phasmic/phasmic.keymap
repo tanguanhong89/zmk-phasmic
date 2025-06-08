@@ -117,14 +117,6 @@
             bindings
                 = 
                 <&macro_press &kp LCTRL>,
-                <&macro_tap &kp C>,
-                <&macro_release &kp LCTRL>,
-
-                <&macro_press &kp LGUI>,
-                <&macro_tap &kp C>,
-                <&macro_release &kp LGUI>,
-                
-                <&macro_press &kp LCTRL>,
                 <&macro_press &kp LSHFT>,
                 <&macro_tap &kp C>,
                 <&macro_release &kp LSHFT>,
@@ -135,15 +127,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                =                
-                <&macro_press &kp LCTRL>,
-                <&macro_tap &kp V>,
-                <&macro_release &kp LCTRL>,
-
-                <&macro_press &kp LGUI>,
-                <&macro_tap &kp V>,
-                <&macro_release &kp LGUI>,
-                
+                =     
                 <&macro_press &kp LCTRL>,
                 <&macro_press &kp LSHFT>,
                 <&macro_tap &kp V>,
@@ -157,13 +141,13 @@
         compatible = "zmk,combos";
         combo_delete {
             timeout-ms = <100>;
-            key-positions = <36 50>;
+            key-positions = <36 48>; // left to right, top to bottom, starting from 0, mod 12 per row
             bindings = <&kp DEL>;
         };
 
         combo_abs {
             timeout-ms = <300>;
-            key-positions = <37 50>;
+            key-positions = <37 48>;
             bindings = <&macro_alt_backspace>;
         };
     };
