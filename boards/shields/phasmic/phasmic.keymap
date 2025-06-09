@@ -139,8 +139,8 @@
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&kp A>, <&kp B>;
+            tapping-term-ms = <200>;
+            bindings = <&mo UTIL>, <&mo MATHS>;
         };
 
     };
@@ -176,7 +176,7 @@
             &kp RET     &kp A     &kp S     &kp D     &kp F     &kp G     &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
             &kp LSHFT   &kp Z     &kp X     &kp C     &kp V     &kp B     &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
             &kp BSPC    &kp LALT  &kp GRAVE &mo UTIL3 &mo SWAP  &kp SPACE &kp N9    &kp N0    &none     &kp N6    &kp N7    &kp N8
-            &kp LCTRL   &kp Q     &mo BLE   &td0      &mo UTIL  &kp LGUI  &kp N9    &kp N0    &kp Y     &kp N6    &kp N7    &kp N8
+            &kp LCTRL   &kp Q     &mo BLE   &mo UTIL2 &td0      &kp LGUI  &kp N9    &kp N0    &kp Y     &kp N6    &kp N7    &kp N8
         >;
     };
 
