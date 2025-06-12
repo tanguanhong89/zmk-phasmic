@@ -250,12 +250,12 @@
     maths {
         display-name = "MATHS";
         bindings = <
-            &none             &none                 &none             &none      &none      &none      &none   &none   &none   &none   &none   &none
-            &none             &none                 &none             &none      &none      &none      &none   &none   &none   &none   &none   &none
-            &macro_maths_frac &macro_maths_int      &none             &none      &none      &none      &none   &none   &none   &none   &none   &none
-            &macro_maths_pow  &macro_maths_under    &macro_maths      &kp MINUS  &kp PLUS   &kp EQUAL  &none   &none   &none   &none   &none   &none
-            &none             &none                 &none             &none      &none      &none      &none   &none   &none   &none   &none   &none
-            &none             &none                 &none             &none      &none      &none      &none   &none   &none   &none   &none   &none
+            &none               &none                 &none             &none      &none      &none      &none   &none   &none   &none   &none   &none
+            &none               &none                 &none             &none      &none      &none      &none   &none   &none   &none   &none   &none
+            &macro_maths_frac   &macro_maths_int      &none             &none      &none      &none      &none   &none   &none   &none   &none   &none
+            &macro_maths_under  &macro_maths_pow    &macro_maths      &kp MINUS  &kp PLUS   &kp EQUAL  &none   &none   &none   &none   &none   &none
+            &none               &none                 &none             &none      &none      &none      &none   &none   &none   &none   &none   &none
+            &none               &none                 &none             &none      &none      &none      &none   &none   &none   &none   &none   &none
         >;
     };
     };
