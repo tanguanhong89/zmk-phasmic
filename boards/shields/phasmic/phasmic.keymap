@@ -37,6 +37,13 @@
                 = <&macro_tap &kp CARET &kp LBRC &kp RBRC &kp LEFT>;
         };
 
+        macro_maths_under: macro_maths_under {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp UNDER &kp LBRC &kp RBRC &kp LEFT>;
+        };
+
         macro_maths_frac: macro_maths_frac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -243,12 +250,12 @@
     maths {
         display-name = "MATHS";
         bindings = <
-            &none             &none             &none             &none      &none      &none      &none   &none   &none   &none   &none   &none
-            &none             &none             &none             &none      &none      &none      &none   &none   &none   &none   &none   &none
-            &macro_maths_frac &macro_maths_int  &macro_maths_pow  &none      &none      &none      &none   &none   &none   &none   &none   &none
-            &macro_maths      &kp UNDER         &kp CARET         &kp MINUS  &kp PLUS   &kp EQUAL  &none   &none   &none   &none   &none   &none
-            &none             &none             &none             &none      &none      &none      &none   &none   &none   &none   &none   &none
-            &none             &none             &none             &none      &none      &none      &none   &none   &none   &none   &none   &none
+            &none             &none                 &none             &none      &none      &none      &none   &none   &none   &none   &none   &none
+            &none             &none                 &none             &none      &none      &none      &none   &none   &none   &none   &none   &none
+            &macro_maths_frac &macro_maths_int      &none             &none      &none      &none      &none   &none   &none   &none   &none   &none
+            &macro_maths_pow  &macro_maths_under    &macro_maths      &kp MINUS  &kp PLUS   &kp EQUAL  &none   &none   &none   &none   &none   &none
+            &none             &none                 &none             &none      &none      &none      &none   &none   &none   &none   &none   &none
+            &none             &none                 &none             &none      &none      &none      &none   &none   &none   &none   &none   &none
         >;
     };
     };
