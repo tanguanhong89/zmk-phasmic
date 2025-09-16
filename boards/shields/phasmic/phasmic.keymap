@@ -250,12 +250,12 @@
     maths {
         display-name = "MATHS";
         bindings = <
-            &none             &none               &none             &kp EQUAL            &kp PLUS            &kp MINUS           &none  &none  &none  &none  &none  &none
-            &none             &none               &none             &macro_maths_frac    &kp STAR            &kp FSLH            &none  &none  &none  &none  &none  &none
-            &none             &none               &none             &macro_maths         &macro_maths_pow    &macro_maths_under  &none  &none  &none  &none  &none  &none
-            &none             &none               &none             &macro_maths_int     &none               &none               &none  &none  &none  &none  &none  &none
-            &none             &none               &none             &none                &none               &none               &none  &none  &none  &none  &none  &none
-            &none             &none               &none             &none                &none               &none               &none  &none  &none  &none  &none  &none
+            &none             &none               &none             &macro_maths    &macro_maths_frac   &macro_maths_under  &none  &none  &none  &none  &none  &none
+            &none             &none               &none             &kp MINUS       &kp FSLH            &macro_maths_pow    &none  &none  &none  &none  &none  &none
+            &none             &none               &none             &kp PLUS        &kp STAR            &macro_maths_int    &none  &none  &none  &none  &none  &none
+            &none             &none               &none             &kp EQUAL       &none               &none               &none  &none  &none  &none  &none  &none
+            &none             &none               &none             &none           &none               &none               &none  &none  &none  &none  &none  &none
+            &none             &none               &none             &none           &none               &none               &none  &none  &none  &none  &none  &none
         >;
     };
     };
