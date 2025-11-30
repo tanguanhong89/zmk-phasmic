@@ -62,21 +62,21 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp BSLH>,<&macro_press &kp LSHFT>,<&macro_tap &kp R>,<&macro_release &kp LSHFT>,<&macro_tap &kp I &kp G &kp H &kp T &kp A &kp R &kp R &kp O &kp W>;
+                = <&macro_tap &kp BSLH>,<&macro_press &kp LSHFT>,<&macro_tap &kp R>,<&macro_release &kp LSHFT>,<&macro_tap &kp I &kp G &kp H &kp T &kp A &kp R &kp R &kp O &kp W &kp SPACE>;
         };
 
         macro_maths_larrow: macro_maths_larrow {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp BSLH>,<&macro_press &kp LSHFT>,<&macro_tap &kp L>,<&macro_release &kp LSHFT>,<&macro_tap &kp E &kp F &kp T &kp A &kp R &kp R &kp O &kp W>;
+                = <&macro_tap &kp BSLH>,<&macro_press &kp LSHFT>,<&macro_tap &kp L>,<&macro_release &kp LSHFT>,<&macro_tap &kp E &kp F &kp T &kp A &kp R &kp R &kp O &kp W &kp SPACE>;
         };
 
         macro_maths_lrarrow: macro_maths_lrarrow {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp BSLH>,<&macro_press &kp LSHFT>,<&macro_tap &kp L>,<&macro_release &kp LSHFT>,<&macro_tap &kp E &kp F &kp T &kp R &kp I &kp G &kp H &kp T &kp A &kp R &kp R &kp O &kp W>;
+                = <&macro_tap &kp BSLH>,<&macro_press &kp LSHFT>,<&macro_tap &kp L>,<&macro_release &kp LSHFT>,<&macro_tap &kp E &kp F &kp T &kp R &kp I &kp G &kp H &kp T &kp A &kp R &kp R &kp O &kp W &kp SPACE>;
         };
 
         macro_alt_backspace: macro_alt_backspace {
