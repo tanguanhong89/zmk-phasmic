@@ -62,7 +62,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LSHFT>,<&macro_tap &kp R>,<&macro_release &kp LSHFT>,<&macro_tap &kp I &kp G &kp H &kp I &kp A &kp R &kp R &kp O &kp W>;
+                = <&macro_press &kp LSHFT>,<&macro_tap &kp R>,<&macro_release &kp LSHFT>,<&macro_tap &kp BSLH &kp I &kp G &kp H &kp T &kp A &kp R &kp R &kp O &kp W>;
         };
 
 
