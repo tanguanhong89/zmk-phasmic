@@ -79,6 +79,18 @@
                 = <&macro_tap &kp BSLH>,<&macro_press &kp LSHFT>,<&macro_tap &kp L>,<&macro_release &kp LSHFT>,<&macro_tap &kp E &kp F &kp T &kp R &kp I &kp G &kp H &kp T &kp A &kp R &kp R &kp O &kp W &kp SPACE>;
         };
 
+        macro_vscode_build: macro_vscode_build {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = 
+                <&macro_press &kp LGUI>,
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp B>,
+                <&macro_release &kp LALT>,
+                <&macro_release &kp LGUI>;
+        };
+
         macro_alt_backspace: macro_alt_backspace {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
