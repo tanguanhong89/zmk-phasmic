@@ -181,6 +181,22 @@
             bindings = <&mo UTIL>, <&mo MATHS>;
         };
 
+        macro_sall: macro_sall {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = 
+                <&macro_press &kp LGUI>,
+                <&macro_tap &kp A>,
+                <&macro_release &kp LGUI>;
+        };
+        td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LGUI>, <&macro_sall>;
+        };
+
     };
 
     combos {
@@ -214,7 +230,7 @@
             &kp RET    &kp A     &kp S     &kp D     &kp F     &kp G     &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
             &kp LSHFT  &kp Z     &kp X     &kp C     &kp V     &kp B     &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
             &kp GRAVE  &kp LALT  &kp BSPC  &kp SPACE &mo SWAP  &mo MATHS &kp GRAVE &kp LALT  &kp BSPC  &kp SPACE &mo SWAP  &mo MATHS
-            &mo BLE    &mo UTIL3 &kp LCTRL &kp LGUI  &mo UTIL  &mo UTIL2 &mo BLE   &mo UTIL3 &kp LCTRL &kp LGUI  &mo UTIL  &mo UTIL2
+            &mo BLE    &mo UTIL3 &kp LCTRL &td1      &mo UTIL  &mo UTIL2 &mo BLE   &mo UTIL3 &kp LCTRL &kp LGUI  &mo UTIL  &mo UTIL2
         >;
     };
 
