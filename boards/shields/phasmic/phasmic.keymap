@@ -197,6 +197,26 @@
             bindings = <&kp LGUI>, <&macro_sall>;
         };
 
+        td2: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo SWAP>, <&mo UTIL>;
+        };
+
+        macro_mathbb: macro_mathbb {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp BSLH &kp M &kp A &kp T &kp H &kp B &kp B &kp SPACE>;
+        };
+
+        td3: tap_dance_3 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo MATHS>, <&macro_mathbb>;
+        };
+
     };
 
     combos {
@@ -229,7 +249,7 @@
             &kp TAB    &kp Q     &kp W     &kp E     &kp R     &kp T     &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSLH
             &kp RET    &kp A     &kp S     &kp D     &kp F     &kp G     &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
             &kp LSHFT  &kp Z     &kp X     &kp C     &kp V     &kp B     &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
-            &kp GRAVE  &kp LALT  &kp BSPC  &kp SPACE &mo SWAP  &mo MATHS &kp GRAVE &kp LALT  &kp BSPC  &kp SPACE &mo SWAP  &mo MATHS
+            &kp GRAVE  &kp LALT  &kp BSPC  &kp SPACE &td2      &td3      &kp GRAVE &kp LALT  &kp BSPC  &kp SPACE &mo SWAP  &mo MATHS
             &mo BLE    &mo UTIL3 &kp LCTRL &td1      &mo UTIL  &mo UTIL2 &mo BLE   &mo UTIL3 &kp LCTRL &kp LGUI  &mo UTIL  &mo UTIL2
         >;
     };
