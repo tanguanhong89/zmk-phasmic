@@ -210,6 +210,12 @@
             bindings = <&macro_tap &kp BSLH &kp M &kp A &kp T &kp H &kp B &kp B &kp SPACE>;
         };
 
+        macro_mathbrc: macro_mathbrc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = = <&macro_tap &kp BSLH &kp LBRC &kp BSLH &kp RBRC &kp LEFT &kp LEFT>;
+        };
+
         td3: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -317,7 +323,7 @@
     maths {
         display-name = "MATHS";
         bindings = <
-            &none             &none               &none             &macro_maths    &macro_maths_frac   &macro_maths_under  &none  &none                &none                 &none                  &none  &none
+            &none             &none               &macro_mathbrc    &macro_maths    &macro_maths_frac   &macro_maths_under  &none  &none                &none                 &none                  &none  &none
             &none             &none               &none             &kp PLUS        &kp STAR            &macro_maths_pow    &none  &none                &none                 &none                  &none  &none
             &none             &none               &none             &kp MINUS       &kp FSLH            &macro_maths_int    &none  &macro_maths_larrow  &macro_maths_lrarrow  &macro_maths_rarrow    &none  &none
             &none             &none               &none             &kp EQUAL       &none               &macro_vscode_build &none  &none                &none                 &none                  &none  &none
