@@ -213,7 +213,7 @@
         macro_mathbrc: macro_mathbrc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = = <&macro_tap &kp BSLH &kp LBRC &kp BSLH &kp RBRC &kp LEFT &kp LEFT>;
+            bindings = <&macro_tap &kp BSLH &kp LBRC &kp BSLH &kp RBRC &kp LEFT &kp LEFT>;
         };
 
         td3: tap_dance_3 {
