@@ -201,7 +201,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo SWAP>, <&mo UTIL>;
+            bindings = <&mo SWAP>, <&mo MATHS>;
         };
 
         macro_mathbb: macro_mathbb {
@@ -220,7 +220,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo MATHS>, <&macro_mathbb>;
+            bindings = <&mo UTIL>, <&mo UTIL2>;
         };
 
     };
@@ -256,7 +256,7 @@
             &kp RET    &kp A     &kp S     &kp D     &kp F     &kp G     &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
             &kp LSHFT  &kp Z     &kp X     &kp C     &kp V     &kp B     &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
             &kp GRAVE  &kp LALT  &kp BSPC  &kp SPACE &td2      &td3      &kp GRAVE &kp LALT  &kp BSPC  &kp SPACE &mo SWAP  &mo MATHS
-            &mo BLE    &mo UTIL3 &kp LCTRL &td1      &mo UTIL  &mo UTIL2 &mo BLE   &mo UTIL3 &kp LCTRL &kp LGUI  &mo UTIL  &mo UTIL2
+            &mo BLE    &mo UTIL3 &kp LCTRL &td1      &td3      &mo UTIL2 &mo BLE   &mo UTIL3 &kp LCTRL &kp LGUI  &mo UTIL  &mo UTIL2
         >;
     };
 
@@ -323,7 +323,7 @@
     maths {
         display-name = "MATHS";
         bindings = <
-            &none             &none               &macro_mathbrc    &macro_maths    &macro_maths_frac   &macro_maths_under  &none  &none                &none                 &none                  &none  &none
+            &macro_mathbb     &none               &macro_mathbrc    &macro_maths    &macro_maths_frac   &macro_maths_under  &none  &none                &none                 &none                  &none  &none
             &none             &none               &none             &kp PLUS        &kp STAR            &macro_maths_pow    &none  &none                &none                 &none                  &none  &none
             &none             &none               &none             &kp MINUS       &kp FSLH            &macro_maths_int    &none  &macro_maths_larrow  &macro_maths_lrarrow  &macro_maths_rarrow    &none  &none
             &none             &none               &none             &kp EQUAL       &none               &macro_vscode_build &none  &none                &none                 &none                  &none  &none
