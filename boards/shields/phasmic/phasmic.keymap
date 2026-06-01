@@ -223,7 +223,7 @@
             bindings = <&mo UTIL>, <&mo UTIL2>;
         };
 
-        tdBTU3: tap_dance_3 {
+        tdBTU3: tap_dance_4 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
