@@ -190,14 +190,14 @@
                 <&macro_tap &kp A>,
                 <&macro_release &kp LGUI>;
         };
-        td1: tap_dance_1 {
+        tdCmd: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LGUI>, <&macro_sall>;
         };
 
-        td2: tap_dance_2 {
+        tdSwMth: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
@@ -216,11 +216,18 @@
             bindings = <&macro_tap &kp BSLH &kp LBRC &kp BSLH &kp RBRC &kp LEFT &kp LEFT>;
         };
 
-        td3: tap_dance_3 {
+        tdU12: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mo UTIL>, <&mo UTIL2>;
+        };
+
+        tdBTU3: tap_dance_3 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo BLE>, <&mo UTIL3>;
         };
 
     };
@@ -255,8 +262,8 @@
             &kp TAB    &kp Q     &kp W     &kp E     &kp R     &kp T     &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSLH
             &kp RET    &kp A     &kp S     &kp D     &kp F     &kp G     &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
             &kp LSHFT  &kp Z     &kp X     &kp C     &kp V     &kp B     &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
-            &kp GRAVE  &kp LALT  &kp BSPC  &kp SPACE &td2      &mo MATHS &kp GRAVE &kp LALT  &kp BSPC  &kp SPACE &mo SWAP  &mo MATHS
-            &mo BLE    &mo UTIL3 &kp LCTRL &td1      &td3      &mo UTIL2 &mo BLE   &mo UTIL3 &kp LCTRL &kp LGUI  &mo UTIL  &mo UTIL2
+            &tdSwMth   &kp SPACE &kp LALT  &tdCmd    &none     &none     &none     &none     &none     &none     &none     &none
+            &tdBTU3    &tdU12    &kp LCTRL &kp BSPC  &none     &none     &none     &none     &none     &none     &none     &none
         >;
     };
 
