@@ -258,12 +258,12 @@
     default_layer {
         display-name = "default";
         bindings = <
-            &kp ESC    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp EQUAL
-            &kp TAB    &kp Q     &kp W     &kp E     &kp R     &kp T     &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSLH
-            &kp RET    &kp A     &kp S     &kp D     &kp F     &kp G     &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
-            &kp LSHFT  &kp Z     &kp X     &kp C     &kp V     &kp B     &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
-            &tdSwMth   &tdCmd    &kp LALT  &kp SPACE &none     &none     &none     &none     &none     &none     &none     &none
-            &tdBTU3    &tdU12    &kp LCTRL &kp BSPC  &none     &none     &none     &none     &none     &none     &none     &none
+            &lt UTIL2 ESC   &kp N1    &kp N2    &kp N3          &kp N4    &kp N5    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp EQUAL
+            &lt MATHS TAB   &kp Q     &kp W     &kp E           &kp R     &kp T     &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSLH
+            &kp RET         &kp A     &kp S     &kp D           &kp F     &kp G     &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
+            &sk LSHIFT      &kp Z     &kp X     &kp C           &kp V     &kp B     &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
+            &mo SWAP        &tdCmd    &sk LALT  &lt UTIL SPACE  &none     &none     &none     &none     &none     &none     &none     &none
+            &lt BLE UTIL3   &tdU12    &sk LCTRL &kp BSPC  &none &none     &none     &none     &none     &none     &none     &none
         >;
     };
 
@@ -311,7 +311,7 @@
             &none &none &none      &macro_bkt &kp LBKT    &kp RBKT   &none &none &none &none &none &none
             &none &none &none      &macro_par &kp LPAR    &kp RPAR   &none &none &none &none &none &none
             &none &none &none      &none      &none       &none      &none &none &none &none &none &none
-            &none &none &none      &none      &none       &none      &none &none &none &none &none &none
+            &none &none &none      &kp DEL    &none       &none      &none &none &none &none &none &none
         >;
     };
 
@@ -330,12 +330,12 @@
     maths {
         display-name = "MATHS";
         bindings = <
-            &macro_mathbb     &none               &macro_mathbrc    &macro_maths    &macro_maths_frac   &macro_maths_under  &none  &none                &none                 &none                  &none  &none
-            &none             &none               &none             &kp PLUS        &kp STAR            &macro_maths_pow    &none  &none                &none                 &none                  &none  &none
-            &none             &none               &none             &kp MINUS       &kp FSLH            &macro_maths_int    &none  &macro_maths_larrow  &macro_maths_lrarrow  &macro_maths_rarrow    &none  &none
-            &none             &none               &none             &kp EQUAL       &none               &macro_vscode_build &none  &none                &none                 &none                  &none  &none
-            &none             &none               &none             &none           &none               &none               &none  &none                &none                 &none                  &none  &none
-            &none             &none               &none             &none           &none               &none               &none  &none                &none                 &none                  &none  &none
+            &none   &macro_mathbb       &macro_mathbrc    &macro_maths    &macro_maths_frac   &macro_maths_under  &none  &none                &none                 &none                  &none  &none
+            &none   &none               &none             &kp PLUS        &kp STAR            &macro_maths_pow    &none  &none                &none                 &none                  &none  &none
+            &none   &none               &none             &kp MINUS       &kp FSLH            &macro_maths_int    &none  &macro_maths_larrow  &macro_maths_lrarrow  &macro_maths_rarrow    &none  &none
+            &none   &none               &none             &kp EQUAL       &none               &macro_vscode_build &none  &none                &none                 &none                  &none  &none
+            &none   &none               &none             &none           &none               &none               &none  &none                &none                 &none                  &none  &none
+            &none   &none               &none             &none           &none               &none               &none  &none                &none                 &none                  &none  &none
         >;
     };
     };
