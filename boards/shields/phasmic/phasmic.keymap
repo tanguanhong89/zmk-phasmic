@@ -206,6 +206,13 @@
             bindings = <&mo SWAP>, <&mo MATHS>;
         };
 
+        tdSwpDir: tap_dance_3 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo SWAP>, <&mo THUMB1>;
+        };
+
         macro_mathbb: macro_mathbb {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
