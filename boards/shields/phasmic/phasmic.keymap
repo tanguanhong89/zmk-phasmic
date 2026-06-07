@@ -206,7 +206,7 @@
             bindings = <&mo SWAP>, <&mo MATHS>;
         };
 
-        tdSwpDir: tap_dance_3 {
+        tdSwpDir: tap_dance_swp_dir {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
