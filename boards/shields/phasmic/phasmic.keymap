@@ -209,8 +209,8 @@
         tdSwpDir: tap_dance_swp_dir {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&mo SWAP>, <&mo THUMB1>;
+            tapping-term-ms = <200>;
+            bindings = <&mo SWAP>, <&mo UTIL>;
         };
 
         macro_mathbb: macro_mathbb {
