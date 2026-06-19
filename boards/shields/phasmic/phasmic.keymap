@@ -180,7 +180,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LG(LS(Z))>
+                <&kp LG(LS(Z))>,
                 <&kp LG(Y)>;
         };
 
