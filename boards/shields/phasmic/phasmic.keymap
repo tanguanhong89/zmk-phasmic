@@ -363,8 +363,8 @@
             &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
             &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
             &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
-            &kp UNDER   &kp MINUS      &kp LESS_THAN  &kp UNDER  &none     &none     &none     &none     &none     &none     &none     &none
-            &kp MINUS     &macro_par      &kp GREATER_THAN &kp DEL  &none &none     &none     &none     &none     &none     &none     &none
+            &kp UNDER   &kp MINUS   &kp LG(EQUAL)   &kp UNDER  &none     &none     &none     &none     &none     &none     &none     &none
+            &kp MINUS   &macro_par  &kp LG(MINUS)  &kp DEL  &none &none     &none     &none     &none     &none     &none     &none
         >;
     };
     };
