@@ -277,7 +277,7 @@
                 <&macro_press &kp LGUI>,
                 <&macro_press &kp LCTRL>,
                 <&macro_tap &kp V>,
-                <&macro_release &kp LCTRL>
+                <&macro_release &kp LCTRL>,
                 <&macro_press &kp LGUI>;
         };
 
