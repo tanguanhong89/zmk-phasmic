@@ -275,10 +275,10 @@
             #binding-cells = <0>;
             bindings  =
                 <&macro_press &kp LGUI>,
-                <&macro_press &kp LCTRL>,
+                <&macro_press &kp LALT>,
                 <&macro_tap &kp V>,
-                <&macro_release &kp LCTRL>,
-                <&macro_press &kp LGUI>;
+                <&macro_release &kp LALT>,
+                <&macro_release &kp LGUI>;
         };
 
         tdU12: tap_dance_3 {
