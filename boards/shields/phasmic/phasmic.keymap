@@ -278,6 +278,12 @@
                 <&macro_press &kp LALT>,
                 <&macro_tap &kp V>,
                 <&macro_release &kp LALT>,
+                <&macro_release &kp LGUI>,
+
+                <&macro_press &kp LGUI>,
+                <&macro_press &kp LSHIFT>,
+                <&macro_tap &kp V>,
+                <&macro_release &kp LSHIFT>,
                 <&macro_release &kp LGUI>;
         };
 
@@ -295,21 +301,6 @@
             bindings = <&mo BLE>, <&mo FUNCNO>;
         };
 
-    };
-
-    combos {
-        compatible = "zmk,combos";
-        combo_delete {
-            timeout-ms = <100>;
-            key-positions = <36 50>; // left to right, top to bottom, starting from 0, mod 12 per row
-            bindings = <&kp DEL>;
-        };
-
-        combo_abs {
-            timeout-ms = <300>;
-            key-positions = <37 48>;
-            bindings = <&macro_alt_backspace>;
-        };
     };
 
     /*
