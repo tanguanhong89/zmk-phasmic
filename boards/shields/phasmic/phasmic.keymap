@@ -15,8 +15,9 @@
 #define UTIL2 4
 #define FUNCNO 5
 #define CMD 6
-#define MATHS 7
-#define THUMB1 8
+#define OPT 7
+#define MATHS 8
+#define THUMB1 9
 
 / {
 
@@ -318,7 +319,7 @@
             &lt UTIL2 TAB   &kp Q       &kp W     &kp E           &kp R     &kp T         &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSLH
             &kp RET         &kp A       &kp S     &lt THUMB1 D    &kp F     &kp G         &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
             &sk LSHIFT      &kp Z       &kp X     &kp C           &kp V     &lt UTIL B    &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
-            &mo UTIL2       &tdSwMth    &tdCmd    &kp SPACE       &none     &none         &kp N1    &kp N3    &kp N5    &tdCmd    &kp N9    &kp EQUAL
+            &mo UTIL2       &tdSwpDir   &tdCmd    &kp SPACE       &none     &none         &kp N1    &kp N3    &kp N5    &tdCmd    &kp N9    &kp EQUAL
             &mo BLE         &kp LALT    &kp LCTRL &kp BSPC        &none     &none         &kp A     &kp B     &kp C     &kp D     &kp E     &kp F
         >;
     };
@@ -392,6 +393,18 @@
             &none   &macro_redo &none   &none   &macro_vscview  &macro_vscode_build &none   &none   &none   &none   &none   &none
             &none   &none       &none   &none   &none           &none               &none   &none   &none   &none   &none   &none
             &none   &none       &none   &none   &none           &none               &none   &none   &none   &none   &none   &none
+        >;
+    };
+
+    opt {
+        display-name = "OPT";
+        bindings = <
+            &none   &macro_mathbb       &macro_mathbrc          &macro_maths    &macro_maths_frac   &macro_maths_under  &none  &none                &none                 &none                  &none  &none
+            &none   &none               &macro_maths_larrow     &kp PLUS        &kp STAR            &macro_maths_pow    &none  &none                &none                 &none                  &none  &none
+            &none   &none               &macro_maths_rarrow     &kp MINUS       &kp FSLH            &macro_maths_int    &none  &macro_maths_larrow  &macro_maths_lrarrow  &macro_maths_rarrow    &none  &none
+            &none   &none               &macro_maths_lrarrow    &kp EQUAL       &none               &macro_vscode_build &none  &none                &none                 &none                  &none  &none
+            &none   &none               &none                   &none           &none               &none               &none  &none                &none                 &none                  &none  &none
+            &none   &none               &none                   &none           &none               &none               &none  &none                &none                 &none                  &none  &none
         >;
     };
 
