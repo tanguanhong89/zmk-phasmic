@@ -245,6 +245,13 @@
             bindings = <&kp LGUI>, <&mo CMD>;
         };
 
+        tdOpt: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <500>;
+            bindings = <&kp LALT>, <&mo OPT>;
+        };
+
         tdSwMth: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -320,7 +327,7 @@
             &kp RET         &kp A       &kp S     &lt THUMB1 D    &kp F     &kp G         &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
             &sk LSHIFT      &kp Z       &kp X     &kp C           &kp V     &lt UTIL B    &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
             &mo UTIL2       &tdSwpDir   &tdCmd    &kp SPACE       &none     &none         &kp N1    &kp N3    &kp N5    &tdCmd    &kp N9    &kp EQUAL
-            &mo BLE         &kp LALT    &kp LCTRL &kp BSPC        &none     &none         &kp A     &kp B     &kp C     &kp D     &kp E     &kp F
+            &mo BLE         &tdOpt      &kp LCTRL &kp BSPC        &none     &none         &kp A     &kp B     &kp C     &kp D     &kp E     &kp F
         >;
     };
 
