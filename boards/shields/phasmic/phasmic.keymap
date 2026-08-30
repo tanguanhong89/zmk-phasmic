@@ -90,6 +90,13 @@
                 = <&macro_tap &kp BSLH>,<&macro_tap &kp I &kp F &kp F &kp SPACE>;
         };
 
+        macro_maths_implies: macro_maths_implies {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp BSLH>,<&macro_tap &kp I &kp M &kp P &kp L &kp I &kp E &kp S &kp SPACE>;
+        };
+
         macro_vscode_build: macro_vscode_build {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -433,7 +440,7 @@
         display-name = "MATHS";
         bindings = <
             &none   &macro_mathbb       &macro_mathbrc    &macro_maths    &macro_maths_frac   &macro_maths_under  &none  &none                &none                 &none                  &none  &none
-            &none   &none               &none             &kp PLUS        &kp STAR            &macro_maths_pow    &none  &none                &macro_maths_iff      &none                  &none  &none
+            &none   &none               &none             &kp PLUS        &kp STAR            &macro_maths_pow    &none  &none                &macro_maths_iff      &macro_maths_implies   &none  &none
             &none   &none               &none             &kp MINUS       &kp FSLH            &macro_maths_int    &none  &macro_maths_larrow  &macro_maths_lrarrow  &macro_maths_rarrow    &none  &none
             &none   &none               &none             &kp EQUAL       &none               &macro_vscode_build &none  &none                &none                 &none                  &none  &none
             &none   &none               &none             &none           &none               &none               &none  &none                &none                 &none                  &none  &none
