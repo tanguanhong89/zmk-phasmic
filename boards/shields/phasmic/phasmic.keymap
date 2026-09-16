@@ -410,7 +410,7 @@
             &none       &none       &none   &none               &none           &none               &none   &none   &none   &none   &none   &none
             &none       &none       &none   &none               &macro_vscview  &macro_vscode_build &none   &none   &none   &none   &none   &none
             &kp UNDER   &kp MINUS   &none   &kp LG(EQUAL)       &none           &none               &none   &none   &none   &none   &none   &none
-            &kp MINUS   &macro_par  &none   &kp &kp LG(MINUS)   &none           &none               &none   &none   &none   &none   &none   &none
+            &kp MINUS   &macro_par  &none   &kp LG(MINUS)   &none           &none               &none   &none   &none   &none   &none   &none
         >;
     };
     };
