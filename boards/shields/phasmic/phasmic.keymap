@@ -13,8 +13,10 @@
 #define SWAP 2
 #define UTIL 3
 #define UTIL2 4
-#define UTIL3 5
-#define MATHS 6
+#define FUNCNO 5
+#define MATHS 8
+#define THUMB1 9
+
 / {
 
    // Activate ADJUST layer by pressing raise and lower
@@ -58,7 +60,52 @@
                 = <&macro_tap &kp BSLH &kp I &kp N &kp T &kp UNDER  &kp LBRC &kp RBRC  &kp CARET &kp LBRC &kp RBRC &kp LEFT &kp LEFT &kp LEFT &kp LEFT>;
         };
 
+        macro_maths_rarrow: macro_maths_rarrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp BSLH>,<&macro_press &kp LSHFT>,<&macro_tap &kp R>,<&macro_release &kp LSHFT>,<&macro_tap &kp I &kp G &kp H &kp T &kp A &kp R &kp R &kp O &kp W &kp SPACE>;
+        };
 
+        macro_maths_larrow: macro_maths_larrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp BSLH>,<&macro_press &kp LSHFT>,<&macro_tap &kp L>,<&macro_release &kp LSHFT>,<&macro_tap &kp E &kp F &kp T &kp A &kp R &kp R &kp O &kp W &kp SPACE>;
+        };
+
+        macro_maths_lrarrow: macro_maths_lrarrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp BSLH>,<&macro_press &kp LSHFT>,<&macro_tap &kp L>,<&macro_release &kp LSHFT>,<&macro_tap &kp E &kp F &kp T &kp R &kp I &kp G &kp H &kp T &kp A &kp R &kp R &kp O &kp W &kp SPACE>;
+        };
+
+        macro_maths_iff: macro_maths_iff {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp BSLH>,<&macro_tap &kp I &kp F &kp F &kp SPACE>;
+        };
+
+        macro_maths_implies: macro_maths_implies {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp BSLH>,<&macro_tap &kp I &kp M &kp P &kp L &kp I &kp E &kp S &kp SPACE>;
+        };
+
+        macro_vscode_build: macro_vscode_build {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = 
+                <&macro_press &kp LGUI>,
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp B>,
+                <&macro_release &kp LALT>,
+                <&macro_release &kp LGUI>;
+        };
 
         macro_alt_backspace: macro_alt_backspace {
             compatible = "zmk,behavior-macro";
@@ -105,12 +152,48 @@
                 = <&macro_tap &kp DQT &kp DQT &kp LEFT>;
         };
 
+        hold_two: hold_two {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&kp LSHIFT>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LCTRL>,
+                <&kp LSHIFT>;
+        };
+
+        macro_left: macro_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = 
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp LEFT>,
+                <&macro_release &kp LALT>;
+        };
+
         macro_lleft: macro_lleft {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>;
         };
+
+        macro_right: macro_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = 
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp RIGHT>,
+                <&macro_release &kp LALT>;
+        };
+
 
         macro_rright: macro_rright {
             compatible = "zmk,behavior-macro";
@@ -143,6 +226,14 @@
                 <&macro_release &kp LCTRL>;
         };
 
+        macro_redo: macro_redo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LG(LS(Z))>,
+                <&kp LG(Y)>;
+        };
+
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -150,21 +241,93 @@
             bindings = <&mo UTIL>, <&mo MATHS>;
         };
 
-    };
-
-    combos {
-        compatible = "zmk,combos";
-        combo_delete {
-            timeout-ms = <100>;
-            key-positions = <36 50>; // left to right, top to bottom, starting from 0, mod 12 per row
-            bindings = <&kp DEL>;
+        macro_sall: macro_sall {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = 
+                <&macro_press &kp LGUI>,
+                <&macro_tap &kp A>,
+                <&macro_release &kp LGUI>;
+        };
+        tdCmd: tap_dance_cmd {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <500>;
+            bindings = <&kp LGUI>, <&mo CMD>;
         };
 
-        combo_abs {
-            timeout-ms = <300>;
-            key-positions = <37 48>;
-            bindings = <&macro_alt_backspace>;
+        tdLCtrl: tap_dance_lctrl {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <500>;
+            bindings = <&kp LCTRL>, <&mo UTIL>;
         };
+
+        tdLAlt: tap_dance_opt {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <500>;
+            bindings = <&kp LALT>, <&mo OPT>;
+        };
+
+        tdSwMth: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo SWAP>, <&mo MATHS>;
+        };
+
+        tdSwpDir: tap_dance_swp_dir {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo SWAP>, <&mo UTIL>;
+        };
+
+        macro_mathbb: macro_mathbb {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp BSLH &kp M &kp A &kp T &kp H &kp B &kp B &kp SPACE>;
+        };
+
+        macro_mathbrc: macro_mathbrc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp BSLH &kp LBRC &kp BSLH &kp RBRC &kp LEFT &kp LEFT>;
+        };
+
+        macro_vscview: macro_vscview {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings  =
+                <&macro_press &kp LGUI>,
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp V>,
+                <&macro_release &kp LALT>,
+                <&macro_release &kp LGUI>,
+
+                <&macro_press &kp LGUI>,
+                <&macro_press &kp LSHIFT>,
+                <&macro_tap &kp V>,
+                <&macro_release &kp LSHIFT>,
+                <&macro_release &kp LGUI>;
+        };
+
+        tdU12: tap_dance_3 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo UTIL>, <&mo UTIL2>;
+        };
+
+        tdBTU3: tap_dance_4 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo BLE>, <&mo FUNCNO>;
+        };
+
     };
 
     /*
@@ -178,12 +341,12 @@
     default_layer {
         display-name = "default";
         bindings = <
-            &kp ESC    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp EQUAL
-            &kp TAB    &kp Q     &kp W     &kp E     &kp R     &kp T     &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSLH
-            &kp RET    &kp A     &kp S     &kp D     &kp F     &kp G     &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
-            &kp LSHFT  &kp Z     &kp X     &kp C     &kp V     &kp B     &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
-            &kp GRAVE  &kp LALT  &kp BSPC  &kp SPACE &mo SWAP  &mo MATHS &kp GRAVE &kp LALT  &kp BSPC  &kp SPACE &mo SWAP  &mo MATHS
-            &mo BLE    &mo UTIL3 &kp LCTRL &kp LGUI  &mo UTIL  &mo UTIL2 &mo BLE   &mo UTIL3 &kp LCTRL &kp LGUI  &mo UTIL  &mo UTIL2
+            &kp ESC    &kp N1    &kp N2    &kp N3       &kp N4    &kp N5    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp EQUAL
+            &kp TAB    &kp Q     &kp W     &kp E        &kp R     &kp T     &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSLH
+            &kp RET    &kp A     &kp S     &lt THUMB1 D &kp F     &kp G     &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
+            &kp LSHFT  &kp Z     &kp X     &kp C        &kp V     &kp B     &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
+            &kp GRAVE  &kp LALT  &kp BSPC  &kp SPACE    &mo SWAP  &mo MATHS &kp GRAVE &kp LALT  &kp BSPC  &kp SPACE &mo SWAP  &mo MATHS
+            &mo BLE    &mo UTIL2 &kp LCTRL &kp LGUI     &mo UTIL  &mo UTIL2 &mo BLE   &mo UTIL2 &kp LCTRL &kp LGUI  &mo UTIL  &mo UTIL2
         >;
     };
 
@@ -214,12 +377,12 @@
     util {
         display-name = "UTIL";
         bindings = <
-            &kp GRAVE   &kp TILDE   &none         &none             &none           &none       &none     &none       &none       &none       &none       &none
-            &kp MINUS   &kp PLUS    &macro_lleft  &kp UP            &macro_rright   &none       &none     &none       &none       &none       &none       &none
-            &none       &none       &kp LEFT      &kp DOWN          &kp RIGHT       &none       &none     &kp LGUI    &kp LALT    &none       &none       &none
-            &none       &none       &kp UNDER     &macro_supercpy   &macro_superpst &none       &none     &none       &none       &none       &none       &none
-            &none       &none       &kp DEL       &none             &none           &none       &none     &none       &none       &none       &none       &none
-            &none       &none       &none         &none             &none           &none       &none     &none       &none       &none       &none       &none
+            &kp GRAVE   &kp TILDE   &macro_lleft    &none       &macro_rright           &none       &none     &none       &none       &none       &none       &none
+            &kp MINUS   &kp PLUS    &macro_left     &kp UP      &macro_right   &none       &none     &none       &none       &none       &none       &none
+            &none       &kp LALT    &kp LEFT        &kp DOWN    &kp RIGHT       &none       &none     &kp LGUI    &kp LALT    &none       &none       &none
+            &none       &macro_redo &kp UNDER       &none       &macro_vscview  &macro_vscode_build &none   &none   &none   &none   &none   &none
+            &none       &none       &kp DEL         &none       &none           &none       &none     &none       &none       &none       &none       &none
+            &none       &none       &none           &none       &none           &none       &none     &none       &none       &none       &none       &none
         >;
     };
 
@@ -235,27 +398,39 @@
         >;
     };
 
-    util3 {
-        display-name = "UTIL3";
+    funcNo {
+        display-name = "FUNCNO";
         bindings = <
-            &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
-            &kp ESC &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp EQUAL
-            &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &none   &none   &none   &none   &none   &none
-            &kp F7  &kp F8  &kp F9  &kp F10 &kp F11 &kp F12 &none   &none   &none   &none   &none   &none
-            &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
-            &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+            &kp F1  &kp F2      &kp F3  &kp F4  &kp F5  &kp F6  &none   &none   &none   &none   &none   &none
+            &kp F7  &kp F8      &kp F9  &kp F10 &kp F11 &kp F12 &none   &none   &none   &none   &none   &none
+            &none   &none       &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+            &none   &none       &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+            &none   &none       &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+            &none   &none       &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
         >;
     };
 
     maths {
         display-name = "MATHS";
         bindings = <
-            &none             &none               &none             &macro_maths    &macro_maths_frac   &macro_maths_under  &none  &none  &none  &none  &none  &none
-            &none             &none               &none             &kp PLUS        &kp STAR            &macro_maths_pow    &none  &none  &none  &none  &none  &none
-            &none             &none               &none             &kp MINUS       &kp FSLH            &macro_maths_int    &none  &none  &none  &none  &none  &none
-            &none             &none               &none             &kp EQUAL       &none               &none               &none  &none  &none  &none  &none  &none
-            &none             &none               &none             &none           &none               &none               &none  &none  &none  &none  &none  &none
-            &none             &none               &none             &none           &none               &none               &none  &none  &none  &none  &none  &none
+            &none   &macro_mathbb       &macro_mathbrc  &macro_maths    &macro_maths_frac   &macro_maths_under  &none  &none                &none                 &none                  &none  &none
+            &none   &none               &macro_mathbb   &kp PLUS        &kp STAR            &macro_maths_pow    &none  &none                &macro_maths_iff      &macro_maths_implies   &none  &none
+            &none   &none               &kp BSLH        &kp MINUS       &kp FSLH            &macro_maths_int    &none  &macro_maths_larrow  &macro_maths_lrarrow  &macro_maths_rarrow    &none  &none
+            &none   &none               &none           &kp EQUAL       &none               &macro_vscode_build &none  &none                &none                 &none                  &none  &none
+            &none   &none               &none           &none           &none               &none               &none  &none                &none                 &none                  &none  &none
+            &none   &none               &none           &none           &none               &none               &none  &none                &none                 &none                  &none  &none
+        >;
+    };
+
+    thumb1 {
+        display-name = "THUMB1";
+        bindings = <
+            &none       &none       &none           &none       &none           &none               &none   &none   &none   &none   &none   &none
+            &none       &none       &none           &none       &none           &none               &none   &none   &none   &none   &none   &none
+            &none       &none       &none           &none       &none           &none               &none   &none   &none   &none   &none   &none
+            &none       &none       &none           &none       &macro_vscview  &macro_vscode_build &none   &none   &none   &none   &none   &none
+            &kp UNDER   &kp MINUS   &kp LG(EQUAL)   &kp UNDER   &none           &none               &none   &none   &none   &none   &none   &none
+            &kp MINUS   &macro_par  &kp LG(MINUS)   &kp DEL     &none           &none               &none   &none   &none   &none   &none   &none
         >;
     };
     };
