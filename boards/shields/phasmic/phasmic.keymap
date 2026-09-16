@@ -250,26 +250,6 @@
                 <&macro_tap &kp A>,
                 <&macro_release &kp LGUI>;
         };
-        tdCmd: tap_dance_cmd {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&kp LGUI>, <&mo CMD>;
-        };
-
-        tdLCtrl: tap_dance_lctrl {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&kp LCTRL>, <&mo UTIL>;
-        };
-
-        tdLAlt: tap_dance_opt {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&kp LALT>, <&mo OPT>;
-        };
 
         tdSwMth: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
