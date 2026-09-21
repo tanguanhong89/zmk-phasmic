@@ -369,12 +369,12 @@
     util2 {
         display-name = "UTIL2";
         bindings = <
-            &none &macro_brc    &kp LBRC    &kp RBRC    &none   &none   &none &none &none &none &none &none
-            &none &macro_bkt    &kp LBKT    &kp RBKT    &none   &none   &none &none &none &none &none &none
-            &none &macro_par    &kp LPAR    &kp RPAR    &none   &none   &none &none &none &none &none &none
-            &none &none         &none       &none       &none   &none   &none &none &none &none &none &none
-            &none &none         &none       &none       &none   &none   &none &none &none &none &none &none
-            &none &none         &none       &none       &none   &none   &none &none &none &none &none &none
+            &none &none &macro_brc  &kp LBRC    &kp RBRC    &none   &none   &none &none &none &none &none
+            &none &none &macro_bkt  &kp LBKT    &kp RBKT    &none   &none   &none &none &none &none &none
+            &none &none &macro_par  &kp LPAR    &kp RPAR    &none   &none   &none &none &none &none &none
+            &none &none &none       &none       &none       &none   &none   &none &none &none &none &none
+            &none &none &none       &none       &none       &none   &none   &none &none &none &none &none
+            &none &none &none       &none       &none       &none   &none   &none &none &none &none &none
         >;
     };
 
