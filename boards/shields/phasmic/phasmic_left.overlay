@@ -4,7 +4,32 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 #include "phasmic.dtsi"
+
+/ {
+    joystick_y: joystick-y {
+        compatible = "zmk,analog-input";
+        sampling-hz = <50>;
+
+        y-axis {
+            // nice!nano v2 D21 (P0.31) is AIN7.
+            io-channels = <&adc 7>;
+            // Replace with the measured resting voltage if the cursor drifts.
+            mv-mid = <1650>;
+            mv-min-max = <1650>;
+            mv-deadzone = <100>;
+            scale-divisor = <100>;
+            evt-type = <INPUT_EV_REL>;
+            input-code = <INPUT_REL_Y>;
+        };
+    };
+
+    joystick-y-listener {
+        compatible = "zmk,input-listener";
+        device = <&joystick_y>;
+    };
+};
 
 &kscan0 {
     col-gpios
