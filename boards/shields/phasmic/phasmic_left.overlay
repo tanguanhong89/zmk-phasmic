@@ -4,8 +4,24 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include <zephyr/dt-bindings/adc/adc.h>
+#include <zephyr/dt-bindings/adc/nrf-adc.h>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include "phasmic.dtsi"
+
+&adc {
+    #address-cells = <1>;
+    #size-cells = <0>;
+
+    channel@7 {
+        // D19 (P0.02 / AIN0). ADC channel 0 is used for battery sensing.
+        reg = <7>;
+        zephyr,gain = "ADC_GAIN_1_6";
+        zephyr,reference = "ADC_REF_INTERNAL";
+        zephyr,acquisition-time = <ADC_ACQ_TIME_DEFAULT>;
+        zephyr,input-positive = <NRF_SAADC_AIN0>;
+    };
+};
 
 / {
     joystick_y: joystick-y {
@@ -13,7 +29,6 @@
         sampling-hz = <50>;
 
         y-axis {
-            // nice!nano v2 D21 (P0.31) is AIN7.
             io-channels = <&adc 7>;
             // Replace with the measured resting voltage if the cursor drifts.
             mv-mid = <1650>;
@@ -36,7 +51,7 @@
         = <&pro_micro 14 (GPIO_ACTIVE_HIGH)>
         , <&pro_micro 16 (GPIO_ACTIVE_HIGH)>
         , <&pro_micro 10 (GPIO_ACTIVE_HIGH)>
-        , <&pro_micro 19 (GPIO_ACTIVE_HIGH)>
+        , <&pro_micro 21 (GPIO_ACTIVE_HIGH)> // Unwired placeholder preserves column indices.
         , <&pro_micro 18 (GPIO_ACTIVE_HIGH)>
         , <&pro_micro 15 (GPIO_ACTIVE_HIGH)>
         ;
